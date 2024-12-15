@@ -10,12 +10,14 @@ public enum TuistAcceptanceFixtures {
     case appWithFrameworkAndTests
     case appWithGlobs
     case appWithGoogleMaps
+    case appWithMetalOptions
     case appWithPlugins
     case appWithPreviews
     case appWithRealm
     case appWithRevenueCat
     case appWithSpmDependencies
     case appWithSpmModuleAliases
+    case appWithSwiftCMark
     case appWithLocalSPMModuleWithRemoteDependencies
     case appWithTestPlan
     case appWithTests
@@ -70,6 +72,7 @@ public enum TuistAcceptanceFixtures {
     case iosAppWithXcframeworks
     case iosWorkspaceWithDependencyCycle
     case iosWorkspaceWithMicrofeatureArchitecture
+    case iosAppWithCatalyst
     case macosAppWithCopyFiles
     case macosAppWithExtensions
     case manifestWithLogs
@@ -111,6 +114,8 @@ public enum TuistAcceptanceFixtures {
             return "app_with_globs"
         case .appWithGoogleMaps:
             return "app_with_google_maps"
+        case .appWithMetalOptions:
+            return "app_with_metal_options"
         case .appWithPlugins:
             return "app_with_plugins"
         case .appWithPreviews:
@@ -123,6 +128,8 @@ public enum TuistAcceptanceFixtures {
             return "app_with_spm_dependencies"
         case .appWithSpmModuleAliases:
             return "app_with_spm_module_aliases"
+        case .appWithSwiftCMark:
+            return "app_with_swift_cmark"
         case .appWithLocalSPMModuleWithRemoteDependencies:
             return "app_with_local_spm_module_with_remote_dependencies"
         case .appWithTestPlan:
@@ -231,6 +238,8 @@ public enum TuistAcceptanceFixtures {
             return "ios_workspace_with_dependency_cycle"
         case .iosWorkspaceWithMicrofeatureArchitecture:
             return "ios_workspace_with_microfeature_architecture"
+        case .iosAppWithCatalyst:
+            return "ios_app_with_catalyst"
         case .macosAppWithCopyFiles:
             return "macos_app_with_copy_files"
         case .macosAppWithExtensions:
