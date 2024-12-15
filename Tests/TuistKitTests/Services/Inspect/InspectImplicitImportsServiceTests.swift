@@ -58,7 +58,7 @@ final class LintImplicitImportsServiceTests: TuistUnitTestCase {
 //        let expectedError = InspectImplicitImportsServiceError.implicitImportsFound([
 //            InspectImportsServiceErrorIssue(target: "App", implicitDependencies: Set(["Framework"])),
 //        ])
-        
+
         let expectedError = LintingError()
 
         // When
@@ -83,8 +83,8 @@ final class LintImplicitImportsServiceTests: TuistUnitTestCase {
         given(generator).load(path: .value(path)).willReturn(graph)
         given(targetScanner).imports(for: .value(app)).willReturn(Set(["PackageTarget"]))
 
-        let expectedError = LintingError.init()
-        
+        let expectedError = LintingError()
+
 //        InspectImplicitImportsServiceError.implicitImportsFound([
 //            InspectImplicitImportsServiceErrorIssue(target: "App", implicitDependencies: Set(["PackageTarget"])),
 //        ])
@@ -100,7 +100,7 @@ final class LintImplicitImportsServiceTests: TuistUnitTestCase {
         let app = Target.test(name: "App", product: .app)
         let project = Project.test(path: path, targets: [app])
         let testTarget = Target.test(name: "PackageTarget", product: .app)
-        
+
         let externalProject = Project.test(path: path, targets: [testTarget], type: .external(hash: nil))
         let graph = Graph.test(
             path: path,
